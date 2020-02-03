@@ -1,0 +1,41 @@
+####################
+#  HOW TO INSTALL  #
+####################
+
+(copied from https://support.gitkraken.com/how-to-install/#deb)
+
+# With Debian #
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb
+sudo dpkg -i gitkraken-amd64.deb
+
+# With tar #
+wget https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
+sudo tar -xvzf gitkraken-amd64.tar.gz
+
+# With rmp #
+wget https://release.gitkraken.com/linux/gitkraken-amd64.rpm
+sudo yum install ./gitkraken-amd64.rpm
+
+-----
+
+GitKraken data is stored in /home/{user}/.gitkraken == ~/.gitkraken
+
+-----
+
+# Known issues on Linux #
+
+- Error with libcurl.so.4
+Error: libcurl.so.4: cannot open shared object file: No such file or directory.
+Solution: sudo apt install libcurl3
+
+- Error with libcurl-gnutls.so.4
+Error: libcurl-gnutls.so.4: cannot open shared object file: No such file or directory
+Solution: sudo ln -s /usr/lib64/libcurl.so.4 /usr/lib64/libcurl-gnutls.so.4
+
+- Error with libXss.so.1
+Error: ./gitkraken ./gitkraken: error while loading shared libraries: libXss.so.1: cannot open shared object file: No such file or directory
+Solution:
+/usr/bin/dnf whatprovides libXss.so.1
+dnf install libXScrnSaver
+dnf check-update
+dnf upgrade
