@@ -1,0 +1,46 @@
+The following guidelines are for use git from command line:
+
+Starting as...
+
+# CREATOR #
+(Firt time you use git you have to configure it; linking it with your github/bitbucket/etc account... :)
+git config --global user.name "Your Name"
+git config --global user.email "you@youraddress.com"
+git config --global push.default matching
+git config --global alias.co checkout
+
+(Then, initialize the local repository; to do this you must be "positioned" in the same directOry where you want the git repository to be;
+files outside this folder are not able to be added to the repository)
+git init
+
+()
+git remote add origin <server>
+
+()
+git add . (to add all that is inside the positioned direcotry)
+git commit -m "Initial commit"
+git push
+
+()
+git checkout new_branch
+...
+git add <whatever>
+git commit -m "Mensajito"
+git push
+...
+git branch master
+git merge new_branch master
+git push ~NOT FINISHED
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# CLONER #
+
+git clone /path/to/repository
+(OR)
+git clone username@host:/path/to/repository
+
+
+----------
+Very simple guide: https://rogerdudler.github.io/git-guide/
+Very useful webpage with some guidelines for starting with git: http://www.johnelder.com/code/git.php
+----------
