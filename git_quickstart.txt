@@ -26,7 +26,7 @@ git checkout new_branch
 ...
 git add <whatever>
 git commit -m "Mensajito"
-git push
+git push origin new_branch
 ...
 git branch master
 git merge new_branch master
