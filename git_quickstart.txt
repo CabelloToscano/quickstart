@@ -44,3 +44,9 @@ git clone username@host:/path/to/repository
 Very simple guide: https://rogerdudler.github.io/git-guide/
 Very useful webpage with some guidelines for starting with git: http://www.johnelder.com/code/git.php
 ----------
+
+
+# To delete branchs
+
+git branch -d the_local_branch
+git push origin :remote_branch
